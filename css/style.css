@@ -1395,10 +1395,10 @@ html, body {
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
 .home-projects-scroll .project-card {
-  height: 53vh !important;
-  height: 53dvh !important;
-  max-height: 308px !important;
-  max-width: 61vw !important;
+   height: 62vh!important;
+  height: 62dvh!important;
+  max-height: 380px!important;
+  max-width: 70vw!important;
 }
 
   .site-header {
