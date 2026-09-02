@@ -1388,7 +1388,7 @@ html, body {
 }
 
 
-@media (min-width: 700px) and (max-width: 1366px) and (orientation: landscape) {
+@media (min-width: 700px) and (max-width: 1920px) and (max-height: 900px) and (orientation: landscape) {
   .home-page .page-scroll {
     overflow-y: auto !important;
     height: 100vh !important;
