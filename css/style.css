@@ -1395,11 +1395,11 @@ html, body {
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
   .home-projects-scroll .project-card {
-    height: 82vh;
-    height: 82dvh;
-    max-height: 500px;
-    max-width: 80vw;
-  }
+     height: 62vh;
+  height: 62dvh;
+  max-height: 380px;
+  max-width: 70vw;
+}
 
   .site-header {
     padding: clamp(0.6rem, 2vw, 1.2rem) 1rem 0.8rem;
