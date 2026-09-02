@@ -1451,10 +1451,6 @@ html, body {
 }*/
 
 @media (min-width: 700px) and (max-width: 1366px) and (orientation: landscape) {
-  .home-page .page-scroll {
-    overflow-y: auto !important;
-    height: 100vh !important;
-  }
 
   html:has(body.home-page) {
     overflow: visible !important;
@@ -1466,13 +1462,27 @@ html, body {
     max-height: none !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
+    touch-action: pan-y !important;
+  }
+
+  .home-page .page-scroll {
+    overflow-y: auto !important;
+    height: 100vh !important;
+    touch-action: pan-y !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .home-page main {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 0 !important;
   }
 
   .home-projects-scroll {
-     display: block;
-    overflow-x: visible;
-    overflow-y: visible;
-    height: auto;
+    display: block;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    height: auto !important;
     touch-action: pan-y !important;
   }
 
@@ -1484,51 +1494,29 @@ html, body {
     justify-content: center;
     gap: 1.5rem;
     padding: 0 1rem;
+    touch-action: pan-y !important;
   }
 
   .home-projects-scroll__item {
     flex: 0 0 45%;
     width: 45%;
+    touch-action: pan-y !important;
   }
-
-  .home-projects-scroll .project-card {
-    height: auto;
-    width: 100%;
-  }
-
-  .photo-grid,
+	
+.photo-grid,
   .photo-gallery-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: dense;
     gap: 1rem;
   }
 
   .gallery-item--wide {
     grid-column: span 2;
   }
-	
-	  .home-page .site-header {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background-color: var(--color-background);
-  }
-
-  .home-page main,
-  .home-page .home-projects-scroll {
-    padding-top: var(--header-padding);
-  }
-
-  .home-page .site-header--scrolled {
-    background-color: rgba(17, 16, 20, 0.6) !important;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-  }
-
-  .home-page .site-header--scrolled .logo,
-  .home-page .site-header--scrolled .nav-link {
-    opacity: 0.85;
+  .home-projects-scroll .project-card {
+    height: auto;
+    width: 100%;
+    touch-action: pan-y !important;
   }
 }
 
