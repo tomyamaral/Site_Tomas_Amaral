@@ -51,11 +51,11 @@ html:has(body.home-page) {
   overflow: hidden;
 }
 body.home-page {
-  height: 100vh;
-  max-height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
   overflow: hidden;
   overscroll-behavior: none;
-	 background-color: var(--color-background);
+ background-color: var(--color-background);
 }
 
 a {
@@ -141,7 +141,7 @@ html, body {
 
 
 .page-scroll {
-  height: 100vh;
+  height: 100dvh;
   overflow-y: auto;
   scrollbar-gutter: stable;
   background-color: var(--color-background);
@@ -308,8 +308,8 @@ html, body {
   position: relative;
   display: block;
   flex: 0 0 auto;
-  height: min(100vh, 650px);   /* controla o tamanho pela altura da janela */
-  width: auto;                 /* a largura é calculada automaticamente */
+  height: min(100dvh, 650px);
+  width: auto;
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 0;
