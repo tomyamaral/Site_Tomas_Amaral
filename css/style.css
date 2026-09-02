@@ -1417,7 +1417,7 @@ html, body {
   z-index: 9999;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0,0,0,1.00);
+  background-color: rgba(0, 0, 0, 0.96);
   text-align: center;
   padding: 1rem;
 }
@@ -1431,8 +1431,8 @@ html, body {
   text-transform: uppercase;
   font-weight: 700;
   color: var(--color-primary);
-  font-size: 4rem;
-  letter-spacing: 0.05em;
+  font-size: 1.6rem;
+  letter-spacing: 0.06em;
 }
 
 
