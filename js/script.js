@@ -199,7 +199,23 @@ if (siteHeader && mainContent) {
   }
 }	
 	
-	
+	function checkOrientation() {
+  const overlay = document.querySelector('.rotate-overlay');
+  if (!overlay) return;
+
+  const isSmallScreen = window.innerWidth <= 1366;
+  const isLandscape = window.innerWidth > window.innerHeight;
+
+  if (isSmallScreen && isLandscape) {
+    overlay.classList.add('is-active');
+  } else {
+    overlay.classList.remove('is-active');
+  }
+}
+
+window.addEventListener('load', checkOrientation);
+window.addEventListener('resize', checkOrientation);
+window.addEventListener('orientationchange', checkOrientation);
 	
 /*const siteHeader = document.querySelector('.site-header');
 const mainContent = document.querySelector('main');
