@@ -308,7 +308,10 @@ html, body {
   position: relative;
   display: block;
   flex: 0 0 auto;
+  height: 650px;
+  height: min(100vh, 650px);
   height: min(100dvh, 650px);
+  max-width: 90vw;
   width: auto;
   aspect-ratio: 4 / 5;
   overflow: hidden;
@@ -1391,6 +1394,13 @@ html, body {
 
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
+  .home-projects-scroll .project-card {
+    height: 82vh;
+    height: 82dvh;
+    max-height: 500px;
+    max-width: 80vw;
+  }
+
   .site-header {
     padding: clamp(0.6rem, 2vw, 1.2rem) 1rem 0.8rem;
   }
@@ -1419,28 +1429,6 @@ html, body {
 
   .about-section {
     margin-top: clamp(4rem, 10vh, 7rem);
-  }
-}
-
-@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (min-width: 900px) {
-  .photo-grid,
-  .photo-gallery-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 899px) {
-  .photo-grid,
-  .photo-gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .about-photo {
-    width: clamp(160px, 22vw, 240px);
-  }
-
-  .about-section {
-    margin-top: clamp(3rem, 8vh, 5rem);
   }
 }
 
