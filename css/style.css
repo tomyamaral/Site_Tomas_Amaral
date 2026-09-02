@@ -1407,10 +1407,11 @@ html, body {
   }
 
   .home-projects-scroll {
-    display: block;
+      display: block;
     overflow-x: visible;
     overflow-y: visible;
     height: auto;
+    touch-action: pan-y;
   }
 
   .home-projects-scroll__track {
