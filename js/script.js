@@ -203,10 +203,11 @@ function checkOrientation() {
   const overlay = document.querySelector('.rotate-overlay');
   if (!overlay) return;
 
+  const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
   const isLandscape = window.innerWidth > window.innerHeight;
-  const isSmallHeight = window.innerHeight <= 600;
+  const isSmallHeight = window.innerHeight <= 1024;
 
-  if (isLandscape && isSmallHeight) {
+  if (isTouchDevice && isLandscape && isSmallHeight) {
     overlay.classList.add('is-active');
   } else {
     overlay.classList.remove('is-active');
