@@ -199,28 +199,7 @@ if (siteHeader && mainContent) {
   }
 }	
 	
-function checkOrientation() {
-  const overlay = document.querySelector('.rotate-overlay');
-  if (!overlay) return;
 
-  const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
-  const w = window.innerWidth;
-  const h = window.innerHeight;
-  const isLandscape = w > h;
-  const isSmallHeight = h <= 1024;
-  const isNotUltrawideDesktop = w <= 1600;
-
-  if (isTouchDevice && isLandscape && isSmallHeight && isNotUltrawideDesktop) {
-    overlay.classList.add('is-active');
-  } else {
-    overlay.classList.remove('is-active');
-  }
-}
-
-window.addEventListener('load', checkOrientation);
-window.addEventListener('resize', checkOrientation);
-window.addEventListener('orientationchange', checkOrientation);
-document.addEventListener('DOMContentLoaded', checkOrientation);
 	
 /*const siteHeader = document.querySelector('.site-header');
 const mainContent = document.querySelector('main');

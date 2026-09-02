@@ -1412,33 +1412,6 @@ html, body {
 	
 
 
-
-.rotate-overlay {
-  display: none !important;
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: 999999 !important;
-  align-items: center !important;
-  justify-content: center !important;
-  background-color: rgba(0, 0, 0, 0.96) !important;
-  text-align: center !important;
-  padding: 1rem !important;
-}
-
-.rotate-overlay.is-active {
-  display: flex !important;
-}
-
-.rotate-overlay__text {
-  font-family: var(--font-title) !important;
-  text-transform: uppercase !important;
-  font-weight: 700 !important;
-  color: var(--color-primary) !important;
-  font-size: 1.6rem !important;
-  letter-spacing: 0.06em !important;
-}
-
-
 /*@media (min-width: 700px) and (max-width: 1920px) and (max-height: 900px) and (orientation: landscape) {
   .home-page .page-scroll {
     overflow-y: auto !important;
