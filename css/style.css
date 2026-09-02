@@ -1458,6 +1458,7 @@ html, body {
     50% { transform: rotate(90deg); }
   }
 
+
 /*@media (min-width: 700px) and (max-width: 1920px) and (max-height: 900px) and (orientation: landscape) {
   .home-page .page-scroll {
     overflow-y: auto !important;
