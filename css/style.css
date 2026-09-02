@@ -1385,6 +1385,8 @@ html, body {
 
   .contact-form input,
   .contact-form textarea { font-size: 16px; }
+	
+	}
 
 @media (orientation: landscape) and (max-height: 900px) {
   .home-projects-scroll {
