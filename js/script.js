@@ -204,10 +204,13 @@ function checkOrientation() {
   if (!overlay) return;
 
   const isTouchDevice = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
-  const isLandscape = window.innerWidth > window.innerHeight;
-  const isSmallHeight = window.innerHeight <= 1024;
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  const isLandscape = w > h;
+  const isSmallHeight = h <= 1024;
+  const isNotUltrawideDesktop = w <= 1600;
 
-  if (isTouchDevice && isLandscape && isSmallHeight) {
+  if (isTouchDevice && isLandscape && isSmallHeight && isNotUltrawideDesktop) {
     overlay.classList.add('is-active');
   } else {
     overlay.classList.remove('is-active');

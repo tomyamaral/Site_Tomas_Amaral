@@ -1414,30 +1414,28 @@ html, body {
 
 
 .rotate-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.96);
-  text-align: center;
-  padding: 1rem;
+  display: none !important;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 999999 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: rgba(0, 0, 0, 0.96) !important;
+  text-align: center !important;
+  padding: 1rem !important;
 }
 
 .rotate-overlay.is-active {
-  display: flex;
+  display: flex !important;
 }
 
 .rotate-overlay__text {
-  font-family: var(--font-title);
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--color-primary);
-  font-size: 1.6rem;
-  letter-spacing: 0.06em;
-}
-
+  font-family: var(--font-title) !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  color: var(--color-primary) !important;
+  font-size: 1.6rem !important;
+  letter-spacing: 0.06em !important;
 }
 
 
