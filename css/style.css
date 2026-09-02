@@ -1417,7 +1417,7 @@ html, body {
   z-index: 9999;
   align-items: center;
   justify-content: center;
-  background-color: rgba(17, 16, 20, 0.85);
+  background-color: rgba(17, 16, 20, 0.30);
   text-align: center;
   padding: 1rem;
 }
