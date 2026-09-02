@@ -1408,16 +1408,11 @@ html, body {
   }
 }
 	
-	.rotate-overlay {
+.rotate-overlay {
   display: none;
 }
 
 @media (orientation: landscape) and (max-width: 1366px) {
-  body.home-page .page-scroll,
-  body.home-page main {
-    display: none !important;
-  }
-
   .rotate-overlay {
     display: flex;
     position: fixed;
@@ -1426,22 +1421,36 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
-    background-color: var(--color-background);
-    color: var(--color-primary);
+    gap: 1.75rem;
+    background-color: rgba(17, 16, 20, 0.88);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     text-align: center;
     padding: 2rem;
   }
 
-  .rotate-overlay p {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    max-width: 300px;
+  .rotate-overlay__icon {
+    width: 56px;
+    height: 56px;
+    color: var(--color-primary);
+    animation: rotate-hint 1.8s ease-in-out infinite;
   }
 
-  .rotate-icon {
-    font-size: 3rem;
-    animation: rotate-hint 1.8s ease-in-out infinite;
+  .rotate-overlay__title {
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    color: var(--color-primary);
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    letter-spacing: 0.05em;
+  }
+
+  .rotate-overlay__text {
+    font-family: var(--font-body);
+    color: var(--color-light);
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    max-width: 320px;
+    line-height: 1.6;
+    opacity: 0.85;
   }
 
   @keyframes rotate-hint {
