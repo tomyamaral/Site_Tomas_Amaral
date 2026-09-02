@@ -1388,7 +1388,25 @@ html, body {
 	
 	}
 
-@media (orientation: landscape) and (max-height: 900px) {
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+
+  .site-header {
+    padding: clamp(0.6rem, 2vw, 1.2rem) 1rem 0.8rem;
+  }
+
+  .logo {
+    font-size: clamp(0.9rem, 2vw, 1.4rem);
+  }
+
+  .nav-link {
+    font-size: clamp(0.65rem, 1.3vw, 0.85rem);
+  }
+
+  .main-nav ul {
+    gap: clamp(0.6rem, 1.8vw, 1.5rem);
+  }
+
   .home-projects-scroll {
     align-items: stretch;
   }
@@ -1405,8 +1423,44 @@ html, body {
     min-height: 0;
   }
 
+  .home-projects-scroll__track {
+    gap: clamp(8px, 1.5vw, 16px);
+    padding: 0 clamp(16px, 3vw, 40px);
+  }
+
   .project-caption {
     flex: 0 0 auto;
+  }
+
+  .project-intro,
+  .project-intro--stacked {
+    padding-top: clamp(1rem, 3vh, 2rem);
+  }
+
+  .about-section {
+    margin-top: clamp(4rem, 10vh, 7rem);
+  }
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (min-width: 900px) {
+  .photo-grid,
+  .photo-gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 899px) {
+  .photo-grid,
+  .photo-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-photo {
+    width: clamp(160px, 22vw, 240px);
+  }
+
+  .about-section {
+    margin-top: clamp(3rem, 8vh, 5rem);
   }
 }
 	
