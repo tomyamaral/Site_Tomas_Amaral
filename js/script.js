@@ -8,12 +8,17 @@ document.addEventListener("DOMContentLoaded", function () {
   var logo = document.querySelector(".logo");
   if (logo) {
     logo.addEventListener("click", function (event) {
-      var isHomePage = window.location.pathname.endsWith("index.html") ||
-                        window.location.pathname === "/" ||
-                        window.location.pathname.endsWith("/");
-      if (isHomePage) {
+      var isHome = window.location.pathname.endsWith("index.html") ||
+                   window.location.pathname === "/" ||
+                   window.location.pathname.endsWith("/");
+      if (isHome) {
         event.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        var scroller = document.querySelector(".page-scroll");
+        if (scroller) {
+          scroller.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
       }
     });
   }
