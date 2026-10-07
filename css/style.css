@@ -1540,6 +1540,12 @@ html, body {
 	    height: clamp(220px, calc(100vh - 320px), 650px);
   height: var(--home-card-h, clamp(220px, calc(100dvh - 320px), 650px));
   }
+	
+	@media (hover: hover) and (pointer: fine) and (orientation: landscape) {
+  .home-projects-scroll .project-card {
+    height: var(--home-card-h, clamp(220px, calc(100dvh - 320px), 650px)) !important;
+  }
+}
 }
 
 /*@media (min-width: 700px) and (max-width: 1920px) and (max-height: 900px) and (orientation: landscape) {
