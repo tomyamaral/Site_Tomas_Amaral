@@ -50,8 +50,20 @@ if (projectsScroller) {
     const canScrollHorizontally =
       projectsScroller.scrollWidth > projectsScroller.clientWidth;
     if (!canScrollHorizontally) return;
+
     event.preventDefault();
-    projectsScroller.scrollLeft += event.deltaY + event.deltaX;
+
+    let delta = Math.abs(event.deltaY) >= Math.abs(event.deltaX)
+      ? event.deltaY
+      : event.deltaX;
+
+    if (event.deltaMode === 1) {
+      delta *= 40;
+    } else if (event.deltaMode === 2) {
+      delta *= projectsScroller.clientWidth;
+    }
+
+    projectsScroller.scrollLeft += delta;
   }, { passive: false });
 }
   // ------------------------------------------------------
