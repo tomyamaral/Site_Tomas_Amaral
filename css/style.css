@@ -1537,7 +1537,8 @@ html, body {
   }
 
   .home-projects-scroll .project-card {
-    height: clamp(200px, calc(100dvh - 260px), 650px);
+	    height: clamp(220px, calc(100vh - 320px), 650px);
+  height: var(--home-card-h, clamp(220px, calc(100dvh - 320px), 650px));
   }
 }
 

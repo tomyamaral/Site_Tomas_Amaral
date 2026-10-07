@@ -235,6 +235,32 @@ if (siteHeader && mainContent && pageScroll && !isHomePage) {
     }
   });
 }*/
-	
+	 const homeScroller = document.querySelector('.home-projects-scroll');
+
+  function fitHomeCards() {
+    if (!homeScroller) return;
+
+    const header = document.querySelector('.site-header');
+    const footer = document.querySelector('.site-footer');
+    const caption = homeScroller.querySelector('.project-caption');
+
+    let used = 24;
+    if (header && getComputedStyle(header).position !== 'fixed') used += header.offsetHeight;
+    if (footer) used += footer.offsetHeight;
+    if (caption) {
+      used += caption.offsetHeight + (parseFloat(getComputedStyle(caption).marginTop) || 0);
+    }
+
+    const available = window.innerHeight - used;
+    const cardHeight = Math.max(200, Math.min(available, 650));
+    document.documentElement.style.setProperty('--home-card-h', cardHeight + 'px');
+  }
+
+  fitHomeCards();
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(fitHomeCards);
+  }
+  window.addEventListener('load', fitHomeCards);
+  window.addEventListener('resize', fitHomeCards);
 
 });
