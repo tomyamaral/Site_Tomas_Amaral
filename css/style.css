@@ -1391,6 +1391,12 @@ html, body {
 	
 	}
 
+@media (min-width: 1025px) and (orientation: landscape) {
+  .photo-gallery-grid.photo-gallery-grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 
 /*@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
